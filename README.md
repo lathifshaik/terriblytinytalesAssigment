@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Tiny Tales React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Tiny Tales React App is a web application that fetches a text file from an API, analyzes the word frequency in the text, and displays the top 20 words in a bar chart. It also provides an "Export" button to download a CSV file containing the histogram data.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Fetches a text file from the Terribly Tiny Tales API
+- Analyzes the word frequency in the text and displays the top 20 words
+- Presents the word frequency data in a visually appealing bar chart
+- Provides an "Export" button to download a CSV file of the histogram data
 
-### `npm start`
+## Preview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Preview](./preview.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
+This is A Hosted single page application on github pages
+Follow the instructions below to get a local copy of the project up and running on your machine.
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (version 12 or higher)
+- npm (version 6 or higher) or yarn (version 1.22 or higher)
+### Installation
 
-### `npm run build`
+1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```shell
+   git clone https://github.com/lathifshaik/terriblytinytalesAssigment.git
+2. Navigate to the project directory:
+cd tiny-tales-react-app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install the dependencies:
+    ```shell
+    npm install
+    or
+    yarn install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Start the development server:
+    ```shell
+    npm start
+    or
+    yarn start
+Open your browser and visit http://localhost:3000 to see the app in action.
+## Usage
+Click the "Submit" button to fetch the text file from the Terribly Tiny Tales API.
 
-### `npm run eject`
+The app will analyze the word frequency in the text and display the top 20 words in a bar chart.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Click the "Export" button to download a CSV file containing the histogram data.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies Used
+React: JavaScript library for building user interfaces
+Axios: Promise-based HTTP client for making API requests
+Chart.js: JavaScript library for creating charts and graph
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ButtonComponent  features
+The ButtonComponent functional component is defined, which represents the main component responsible for fetching data, parsing text, and rendering the chart.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+State variables data and topWords are declared using the useState hook. data holds the fetched
 
-## Learn More
+## ExportButton features
+The ExportButton functional component is defined, which represents the button component responsible for exporting data.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The component receives the topWords prop, which contains the top words data.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The downloadCsv function is triggered when the export button is clicked. It creates the CSV content by mapping over the topWords array and joining each word with a comma. The lines are joined with a newline character.
 
-### Code Splitting
+An anchor element (<a>) is dynamically created and appended to the document body. It is configured with the CSV content, a filename of "word_frequency.csv", and the necessary attributes for downloading.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Finally, the download is triggered by programmatically clicking the anchor element.
 
-### Analyzing the Bundle Size
+The component returns a <div> containing the export button, which is displayed in the center of the page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgements
+Terribly Tiny Tales for providing the text file API
+Chart.js for the chart visualization library
+## Contributing
+Contributions are welcome! If you find any issues or have suggestions for improvement, feel free to open an issue or create a pull request.
