@@ -2,6 +2,8 @@
 
 The Tiny Tales React App is a web application that fetches a text file from an API, analyzes the word frequency in the text, and displays the top 20 words in a bar chart. It also provides an "Export" button to download a CSV file containing the histogram data.
 
+## Website is being on https://tinytalesassigment.netlify.app/
+
 ## Features
 
 - Fetches a text file from the Terribly Tiny Tales API
@@ -48,6 +50,10 @@ Click the "Submit" button to fetch the text file from the Terribly Tiny Tales AP
 The app will analyze the word frequency in the text and display the top 20 words in a bar chart.
 
 Click the "Export" button to download a CSV file containing the histogram data.
+
+## Layout Design
+Layout Design is Borrowed from https://www.terriblytinytales.com/ itself 
+
 
 ## Technologies Used
 React: JavaScript library for building user interfaces
